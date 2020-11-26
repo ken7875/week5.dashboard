@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首頁</title>
+  <link rel="stylesheet" href="assets/style/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+  rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <nav class="col-md-3 bg-light h-100 p-3 position-fixed">
+        <h1 class="mb-4 ml-4">
+        <a href="#">
+        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week5/logo-ANSWER.svg" alt="logo">
+        </a>
+        </h1>
+        <ul>
+        <li class="mb-4">
+        <a href="#" class="nav-link"><span class="material-icons mr-3">
+        insert_chart
+        </span>
+        <span></span>Dashboard</span></a>
+        </li>
+        <li class="mb-4">
+        <a href="#" class="nav-link"><span class="material-icons mr-3">
+        question_answer
+        </span>
+        <span>Question</span></a>
+        </li>
+        <li class="mb-4">
+        <a href="index.html" class="nav-link"><span class="material-icons  mr-3">
+        assignment
+        </span>
+        <span>Assignment</span></a>
+        </li>
+        <li class="mb-4">
+        <a href="#" class="nav-link"><span class="material-icons mr-3">
+        video_library
+        </span>
+        <span>Course</span></a>
+        </li>
+        <li class="mb-4">
+        <a href="admin.html" class="nav-link"><span class="material-icons mr-3">
+        supervisor_account
+        </span>
+        <span>Admin</span></a>
+        </li>
+        <li class="mb-4">
+        <a href="#" class="nav-link"><span class="material-icons mr-3">
+        settings
+        </span>
+        <span>Settings</span></a>
+        </li>
+        <li class= "mb-3 ml-4 d-flex align-items-center fixed-bottom">
+        <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/andychen.jpeg?raw=true" alt="account" class="mr-2">
+        <div>
+        <p class="mb-1">Andy Chen</p>
+        <p class="mb-0">andy0401@mail.com</p>
+        </div>
+        </li>
+        </ul>
+      </nav>
+      <main class="col-md-9 px-md-4 py-md-5 ml-md-auto">
+        
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Admin</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4>Account</h4>
+          <form class="pb-3 mb-2">
+              <label for="name" class="w-100 mb-1">name</label>
+              <input type="text" id="name" name="name" class="w-100 py-2 mb-2" placeholder="請輸入您名稱">
+              <label for="email" class="w-100 mb-1">email</label>
+              <input type="text" name="email" id="name" class="w-100 py-2 mb-2" placeholder="請輸入您電子郵件">
+          </form>
+          <div class="Verification pb-3 mt-3">
+              <h4>Verification</h4>
+              <div class="d-flex justify-content-between mt-2">
+                <p>
+                    <span class="material-icons text-danger">
+                        warning
+                    </span>
+                    unverified
+                </p>
+                <p>2020/4/12</p>
+              </div>
+              <button class="btn btn-white text-primary border-light w-100 py-2">Send Verification Mail</button>
+          </div>
+          <div class="access form-group h4 pb-3 mt-3">
+            <label for="access">Example select</label>
+                <select class="form-control" id="access">
+                    <option disabled selected>choose your admin</option>
+                </select>
+          </div>
+          <h4>Custom Access</h4>
+          <div class="custom-control custom-checkbox mb-2">
+            <input type="checkbox" class="custom-control-input" id="customCheck1">
+            <label class="custom-control-label" for="customCheck1" class="w-100">lecture</label>
+          </div>
+          <div class="custom-control custom-checkbox mb-2">
+            <input type="checkbox" class="custom-control-input" id="customCheck2">
+            <label class="custom-control-label" for="customCheck2">Coupon</label>
+          </div>
+          <div class="custom-control custom-checkbox mb-2">
+            <input type="checkbox" class="custom-control-input" id="customCheck3">
+            <label class="custom-control-label" for="customCheck3">Message</label>
+          </div>
+          <div class="custom-control custom-checkbox mb-2">
+            <input type="checkbox" class="custom-control-input" id="customCheck4">
+            <label class="custom-control-label" for="customCheck4">Setting</label>
+          </div>
+          <div class="custom-control custom-checkbox mb-2">
+            <input type="checkbox" class="custom-control-input" id="customCheck5">
+            <label class="custom-control-label" for="customCheck5">Task Menu</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<header class="d-flex align-items-center justify-content-between">
+    <div class="d-flex">
+        <h2 class="mr-5">Admin</h2>
+        <button type="button" class="btn btn-white text-primary" data-toggle="modal" data-target="#exampleModal">
+            <span class="material-icons">
+                add
+            </span>
+                Add New Admin
+          </button>
+    </div>
+    <div class="icon">
+        <span class="material-icons mr-3">
+            search
+        </span>
+        <span class="material-icons">
+            notifications_active
+        </span>
+    </div>
+</header>
+<div class="container-fluid">
+    <table class="w-100">
+        <thead>
+            <tr class="row">
+                <th class="col-md-2">
+                    ID
+                    <span class="material-icons">
+                        arrow_downward
+                    </span>
+                </th>
+                <th class="col-md-3">Name</th>
+                <th class="col-md-4">Email</th>
+                <th>Verified</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row py-2">
+                <th class="col-md-2">#1</th>
+                <td class="col-md-3">Emir Wicks</td>
+                <td class="col-md-4">emir.wicks@mail.com</td>
+                <td class="col-md-2">Yes</td>
+                <td>
+                    <button class="btn btn-white p-0"><span class="material-icons mr-1">
+                    remove_red_eye
+                    </span></button>
+                    <button class="btn btn-white p-0"><span class="material-icons">
+                        edit
+                    </span></button>
+                </td>
+            </tr>
+            <tr class="row py-2">
+                <th class="col-md-2">#2</th>
+                <td class="col-md-3">Zaina Goldsmith</td>
+                <td class="col-md-4">zaina.goldsmith@mail.com</td>
+                <td class="col-md-2">Yes</td>
+                <td>
+                    <button class="btn btn-white p-0"><span class="material-icons mr-1">
+                    remove_red_eye
+                    </span></button>
+                    <button class="btn btn-white p-0"><span class="material-icons">
+                        edit
+                    </span></button>
+                </td>
+            </tr>
+            <tr class="row py-2">
+                <th class="col-md-2">#3</th>
+                <td class="col-md-3">Mahima Lopez</td>
+                <td class="col-md-4">Mahima Lopez@mail.com</td>
+                <td class="col-md-2">Yes</td>
+                <td>
+                    <button class="btn btn-white p-0"><span class="material-icons mr-1">
+                    remove_red_eye
+                    </span></button>
+                    <button class="btn btn-white p-0"><span class="material-icons">
+                        edit
+                    </span></button>
+                </td>
+            </tr>
+            <tr class="row py-2">
+                <th class="col-md-2">#4</th>
+                <td class="col-md-3">Pharrell Murray</td>
+                <td class="col-md-4">Pharrell Murray@mail.com</td>
+                <td class="col-md-2">Yes</td>
+                <td>
+                    <button class="btn btn-white p-0"><span class="material-icons mr-1">
+                    remove_red_eye
+                    </span></button>
+                    <button class="btn btn-white p-0"><span class="material-icons">
+                        edit
+                    </span></button>
+                </td>
+            </tr>
+            <tr class="row py-2">
+                <th class="col-md-2">#5</th>
+                <td class="col-md-3">Annika Mcbride</td>
+                <td class="col-md-4">Annika Mcbride@mail.com</td>
+                <td class="col-md-2">Yes</td>
+                <td>
+                    <button class="btn btn-white p-0"><span class="material-icons mr-1">
+                    remove_red_eye
+                    </span></button>
+                    <button class="btn btn-white p-0"><span class="material-icons">
+                        edit
+                    </span></button>
+                </td>
+            </tr>
+            <tr class="row py-2">
+                <th class="col-md-2">#6</th>
+                <td class="col-md-3">Fatimah Clark</td>
+                <td class="col-md-4">Fatimah Clark@mail.com</td>
+                <td class="col-md-2">Yes</td>
+                <td>
+                    <button class="btn btn-white p-0"><span class="material-icons mr-1">
+                    remove_red_eye
+                    </span></button>
+                    <button class="btn btn-white p-0"><span class="material-icons">
+                        edit
+                    </span></button>
+                </td>
+            </tr>
+            <tr class="row py-2">
+                <th class="col-md-2">#7</th>
+                <td class="col-md-3">Klaudia Rhodes</td>
+                <td class="col-md-4">Klaudia Rhodes@mail.com</td>
+                <td class="col-md-2">Yes</td>
+                <td>
+                    <button class="btn btn-white p-0"><span class="material-icons mr-1">
+                    remove_red_eye
+                    </span></button>
+                    <button class="btn btn-white p-0"><span class="material-icons">
+                        edit
+                    </span></button>
+                </td>
+            </tr>
+            <tr class="row py-2">
+                <th class="col-md-2">#8</th>
+                <td class="col-md-3">Tillie Lucero</td>
+                <td class="col-md-4">Tillie Lucero@mail.com</td>
+                <td class="col-md-2">Yes</td>
+                <td>
+                    <button class="btn btn-white p-0"><span class="material-icons mr-1">
+                    remove_red_eye
+                    </span></button>
+                    <button class="btn btn-white p-0"><span class="material-icons">
+                        edit
+                    </span></button>
+                </td>
+            </tr>
+            <tr class="row py-2">
+                <th class="col-md-2">#9</th>
+                <td class="col-md-3">Sabrina Stephenson</td>
+                <td class="col-md-4">Sabrina Stephenson@mail.com</td>
+                <td class="col-md-2">Yes</td>
+                <td>
+                    <button class="btn btn-white p-0"><span class="material-icons mr-1">
+                    remove_red_eye
+                    </span></button>
+                    <button class="btn btn-white p-0"><span class="material-icons">
+                        edit
+                    </span></button>
+                </td>
+            </tr>
+            <tr class="row py-2">
+                <th class="col-md-2">#10</th>
+                <td class="col-md-3">Annie Smith</td>
+                <td class="col-md-4">Annie Smith@mail.com</td>
+                <td class="col-md-2">Yes</td>
+                <td>
+                    <button class="btn btn-white p-0"><span class="material-icons mr-1">
+                    remove_red_eye
+                    </span></button>
+                    <button class="btn btn-white p-0"><span class="material-icons">
+                        edit
+                    </span></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+      </main>
+    </div>
+  </div>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+</html>
