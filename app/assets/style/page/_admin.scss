@@ -1,0 +1,34 @@
+table{
+    overflow: hidden;
+}
+
+thead{
+    border-bottom: 1px solid $dark;
+    span{
+        color: $primary;
+        font-size: 20px !important;
+    }
+}
+tbody{
+    tr{
+        border-bottom: 1px solid $gray-light;
+    }
+}
+
+form{
+    border-bottom: 2px solid $gray-light;
+    input{
+        background-color: $gray-light;
+        border: none;
+    }
+}
+
+.Verification{
+    border-bottom: 2px solid $gray-light;
+    input{
+        border: 1px solid $light;
+    }
+}
+.access{
+    border-bottom: 2px solid $gray-light;
+}
